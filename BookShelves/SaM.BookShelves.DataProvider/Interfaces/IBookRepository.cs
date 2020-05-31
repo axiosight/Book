@@ -1,4 +1,5 @@
-﻿using SaM.BookShelves.Models.ViewModels;
+﻿using SaM.BookShelves.Models.Entities;
+using SaM.BookShelves.Models.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,6 +9,10 @@ namespace SaM.BookShelves.DataProvider.Interfaces
 {
     public interface IBookRepository
     {
+        void DeleteBookById(string id);
+
+        void AddBook(Book book);
+
         Task<IEnumerable<BookViewModel>> GetAllBooks();
 
         Task<IEnumerable<BookViewModel>> GetSearchBooks(string tagSearch, string termSearch);

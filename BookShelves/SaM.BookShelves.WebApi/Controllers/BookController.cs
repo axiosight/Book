@@ -4,8 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using SaM.BookShelves.Common.Routes;
 using SaM.BookShelves.Logic.Interfaces;
+using SaM.BookShelves.Models.ViewModels;
 
 namespace SaM.BookShelves.WebApi.Controllers
 {
@@ -25,6 +27,35 @@ namespace SaM.BookShelves.WebApi.Controllers
             var res = await _bookService.GetAllBooks();
 
             return Ok(res);
+        }
+
+        [HttpDelete(RoutesApi.Book.DeleteBook)]
+        public IActionResult Delete(string id)
+        {
+            _bookService.DeleteBookById(id);
+
+            return Ok();
+        }
+
+        [HttpPost(RoutesApi.Book.AddBook)]
+        public async Task<IActionResult> AddBook([FromForm]AddBookViewModel model)
+        {
+            var addBookResponse = await _bookService.AddBook(model);
+
+            if (!addBookResponse.Result)
+            {
+                return BadRequest(new ResponseViewModel
+                {
+                    Message = addBookResponse.Message
+                });
+            }
+            else
+            {
+                return Ok(new ResponseViewModel
+                {
+                    Message = addBookResponse.Message
+                });
+            }
         }
 
         [HttpPost(RoutesApi.Book.GetSearchBooks)]

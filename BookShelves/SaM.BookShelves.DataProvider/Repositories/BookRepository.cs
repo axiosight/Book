@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore.Internal;
 using SaM.BookShelves.Common.Constants;
 using SaM.BookShelves.DataProvider.Interfaces;
+using SaM.BookShelves.Models.Entities;
 using SaM.BookShelves.Models.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,24 @@ namespace SaM.BookShelves.DataProvider.Repositories
         public BookRepository(BookShelvesContext context)
         {
             _context = context;
+        }
+        public void AddBook(Book book)
+        {
+            _context.Books.Add(book);
+            _context.SaveChanges();
+        }
+
+        public void DeleteBookById(string id)
+        {
+            Book item = _context.Books.Find(id);
+            var previews = _context.Previews.Where(p => string.Equals(p.BookId, id));
+            foreach (var preview in previews)
+            {
+                _context.Previews.Remove(preview);
+            }
+
+            _context.Books.Remove(item);
+            _context.SaveChanges();
         }
         public async Task<IEnumerable<BookViewModel>> GetAllBooks()
         {
@@ -71,7 +90,7 @@ namespace SaM.BookShelves.DataProvider.Repositories
                                                   {
                                                       Id = pc.Id,
                                                       Img = pc.Img,
-                                                      ImgUrl = $"data:image/jpeg;base64,{Convert.ToBase64String(pc.Img)}",
+                                                      ImgUrl = pc.Img == null ? "" : $"data:image/jpeg;base64,{Convert.ToBase64String(pc.Img)}",
                                                       IsPreview = pc.IsPreview,
                                                       Type = pc.Type,
                                                       Extension = pc.Extension

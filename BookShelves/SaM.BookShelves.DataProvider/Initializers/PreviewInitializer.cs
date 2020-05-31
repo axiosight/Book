@@ -44,7 +44,7 @@ namespace SaM.BookShelves.DataProvider.Initializers
                         Extension = ConfigPreviewInitializer.Previews.Extension,
                         Type = ConfigPreviewInitializer.Previews.Type,
                         IsPreview = flag
-                    }); ; ;
+                    });
                 }
                 #endregion
 

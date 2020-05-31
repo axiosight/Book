@@ -81,30 +81,40 @@ export class Order extends Component {
             </tr>
           </thead>
           <tbody>
-            {this.props.data.map((e) => {
-              return (
-                <tr>
-                  <td className="text-center">
-                    {e.userName} email: {e.email} floor: {e.floor} room:{" "}
-                    {e.room}
-                  </td>
-                  <td className="text-center">{e.bookName}</td>
-                  <td className="text-center">{e.statusName}</td>
-                  <td className="text-center">
-                    {this.renderGiveToUserButton(e.statusName, e.id)}
-                    <Button
-                      className="m-2"
-                      style={{ boxShadow: "5px 5px 10px #cccccc" }}
-                      variant="outline-danger"
-                      size="sm"
-                      onClick={() => this.changeStatus(actions.backToLib, e.id)}
-                    >
-                      Back to library
-                    </Button>
-                  </td>
-                </tr>
-              );
-            })}
+            {!this.props.data.lenght ? (
+              <tr>
+                <td colSpan="4">
+                  <center>There are no orders</center>
+                </td>
+              </tr>
+            ) : (
+              this.props.data.map((e) => {
+                return (
+                  <tr>
+                    <td className="text-center">
+                      {e.userName} email: {e.email} floor: {e.floor} room:{" "}
+                      {e.room}
+                    </td>
+                    <td className="text-center">{e.bookName}</td>
+                    <td className="text-center">{e.statusName}</td>
+                    <td className="text-center">
+                      {this.renderGiveToUserButton(e.statusName, e.id)}
+                      <Button
+                        className="m-2"
+                        style={{ boxShadow: "5px 5px 10px #cccccc" }}
+                        variant="outline-danger"
+                        size="sm"
+                        onClick={() =>
+                          this.changeStatus(actions.backToLib, e.id)
+                        }
+                      >
+                        Back to library
+                      </Button>
+                    </td>
+                  </tr>
+                );
+              })
+            )}
           </tbody>
         </Table>
       </div>

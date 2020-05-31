@@ -17,6 +17,8 @@ namespace SaM.BookShelves.Common.Routes
         {
             public const string GetAllBooks = "api/book/getAllBooks";
             public const string GetSearchBooks = "api/boook/search";
+            public const string AddBook = "api/book/addBook";
+            public const string DeleteBook = "api/book/deleteBook/{id}";
         }
 
         public static class Admin

@@ -8,6 +8,8 @@ namespace SaM.BookShelves.Logic.Interfaces
 {
     public interface IBookService
     {
+        void DeleteBookById(string id);
+        Task<ResponseViewModel> AddBook(AddBookViewModel model);
         Task<IEnumerable<BookViewModel>> GetAllBooks();
         Task<IEnumerable<BookViewModel>> GetSearchBooks(string tagSearch, string termSearch);
         void ChangeStatus(string id, string statusId);

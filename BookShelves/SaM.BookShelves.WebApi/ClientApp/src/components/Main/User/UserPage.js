@@ -143,7 +143,7 @@ export class UserPage extends Component {
     form.append("termSearch", this.state.searchTerm);
     form.append("tagSearch", this.tags.current.state.value);
 
-    debugger;
+    //debugger;
 
     let url = "api/boook/search";
     let method = "POST";

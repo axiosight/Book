@@ -219,6 +219,10 @@ export class BooksCards extends Component {
     const statuses = this.props.statuses;
     const userId = this.props.userId;
     const isUserBooks = this.props.isUserBooks;
+
+    if(this.props.data.length === 0) {
+      return <div>Sorry, books not found.</div>
+    }
     return (
       <Row>
         {this.props.data.map(function (item) {
