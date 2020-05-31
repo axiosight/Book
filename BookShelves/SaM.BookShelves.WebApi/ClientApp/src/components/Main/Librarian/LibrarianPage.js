@@ -254,7 +254,8 @@ export class LibrarianPage extends Component {
       this.state.yearIsValid &&
       this.state.descriptionIsValid &&
       this.state.authorsIsValid &&
-      this.state.publishersIsValid
+      this.state.publishersIsValid &&
+      this.state.imageIsValid
     ) {
       let form = new FormData();
       form.append("name", this.state.name);

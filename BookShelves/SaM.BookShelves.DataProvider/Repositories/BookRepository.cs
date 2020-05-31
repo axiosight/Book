@@ -35,6 +35,12 @@ namespace SaM.BookShelves.DataProvider.Repositories
                 _context.Previews.Remove(preview);
             }
 
+            var entities = _context.BookEntities.Where(p => string.Equals(p.BookId, id));
+            foreach (var entity in entities)
+            {
+                _context.BookEntities.Remove(entity);
+            }
+
             _context.Books.Remove(item);
             _context.SaveChanges();
         }
