@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SaM.BookShelves.Common", "SaM.BookShelves.Common\SaM.BookShelves.Common.csproj", "{E21AADB6-5DE7-4648-A721-2A21BABAFE28}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SaM.BookShelves.DataProvider", "SaM.BookShelves.DataProvider\SaM.BookShelves.DataProvider.csproj", "{AFAC0971-4942-4E44-AB39-2FDE598F3647}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SaM.BookShelves.Logic", "SaM.BookShelves.Logic\SaM.BookShelves.Logic.csproj", "{A4EE6E96-1BBE-4071-96E5-D77E1DDCF1B8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SaM.BookShelves.Models", "SaM.BookShelves.Models\SaM.BookShelves.Models.csproj", "{D8831254-B0F4-4AE6-A8F7-1A3D9157A274}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SaM.BookShelves.WebApi", "SaM.BookShelves.WebApi\SaM.BookShelves.WebApi.csproj", "{4DC3CC56-D89B-4FAB-B368-C3CA9A1D5DB8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E21AADB6-5DE7-4648-A721-2A21BABAFE28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E21AADB6-5DE7-4648-A721-2A21BABAFE28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E21AADB6-5DE7-4648-A721-2A21BABAFE28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E21AADB6-5DE7-4648-A721-2A21BABAFE28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFAC0971-4942-4E44-AB39-2FDE598F3647}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFAC0971-4942-4E44-AB39-2FDE598F3647}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFAC0971-4942-4E44-AB39-2FDE598F3647}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFAC0971-4942-4E44-AB39-2FDE598F3647}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4EE6E96-1BBE-4071-96E5-D77E1DDCF1B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4EE6E96-1BBE-4071-96E5-D77E1DDCF1B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4EE6E96-1BBE-4071-96E5-D77E1DDCF1B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4EE6E96-1BBE-4071-96E5-D77E1DDCF1B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8831254-B0F4-4AE6-A8F7-1A3D9157A274}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8831254-B0F4-4AE6-A8F7-1A3D9157A274}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8831254-B0F4-4AE6-A8F7-1A3D9157A274}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8831254-B0F4-4AE6-A8F7-1A3D9157A274}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DC3CC56-D89B-4FAB-B368-C3CA9A1D5DB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DC3CC56-D89B-4FAB-B368-C3CA9A1D5DB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DC3CC56-D89B-4FAB-B368-C3CA9A1D5DB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DC3CC56-D89B-4FAB-B368-C3CA9A1D5DB8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9BACD2DC-DDC6-44B1-BF5C-9EAC911017AB}
+	EndGlobalSection
+EndGlobal
